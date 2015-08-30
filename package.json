@@ -1,9 +1,9 @@
 {
-  "name": "spacetime",
-  "version": "0.0.0",
-  "description": "Twitter for user-generated events",
-  "main": "server/server.js",
+  "name": "Spacetime",
+  "version": "1.0.0",
+  "description": "Live user-generated event stream",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
