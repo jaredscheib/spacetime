@@ -24,6 +24,7 @@
     "cors": "^2.7.1",
     "express": "^4.13.3",
     "method-override": "^2.3.5",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "mysql": "git://github.com/felixge/node-mysql"
   }
 }
