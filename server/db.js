@@ -6,7 +6,14 @@ var connection = mysql.connection({
   database: 'spacetimedb'
 });
 
-connection.connect();
+connection.connect(function(err) {
+  if (err) {
+    console.error('Error connceting to MySQL database: ' + err.stack);
+    return;
+  } else {
+    console.log('Connected to database as id ' + connection.threadId);
+  }
+});
 
 connection.query('CREATE TABLE `events` (
   `uid` INT(11) NOT NULL AUTO_INCREMENT,
