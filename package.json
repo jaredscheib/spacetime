@@ -4,6 +4,7 @@
   "description": "Live user-generated event stream",
   "scripts": {
     "start": "node server/server.js",
+    "seed": "node db/scripts/create_seed_data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +26,6 @@
     "express": "^4.13.3",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
-    "mysql": "git://github.com/felixge/node-mysql"
+    "mysql": "^2.9.0"
   }
 }
