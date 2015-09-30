@@ -1,3 +1,6 @@
+(function(){
+'use strict'
+
 angular.module('spacetime')
 
 .controller('eventsCtrl', ['$scope', '$http', function($scope, $http){
@@ -16,3 +19,5 @@ angular.module('spacetime')
     });
   };
 }]);
+
+})();

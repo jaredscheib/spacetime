@@ -1,1 +1,3 @@
-angular.module('spacetime', []);
+(function(){
+  angular.module('spacetime', []);
+})();

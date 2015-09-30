@@ -1,3 +1,6 @@
+(function(){
+'use strict'
+
 angular.module('spacetime')
   
   .directive('eventForm', [function() {
@@ -17,3 +20,5 @@ angular.module('spacetime')
       }
     };
   }]);
+
+})();
