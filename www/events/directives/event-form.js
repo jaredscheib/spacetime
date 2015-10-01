@@ -13,21 +13,19 @@ angular.module('spacetime')
 
         scope.submitEvent = function(e) {
           e.preventDefault();
-          console.log('newEvent', scope.newEvent);
           scope.formSubmitted = true;
-
           $http({
             method: 'POST',
             url: '/events',
             data: scope.newEvent
           })
           .success(function(res){
-
+            scope.events.push(scope.newEvent);
           })
           .error(function(err){
-            
+            alert(err.code);
+            scope.formSubmitted = false;
           });
-          debugger;
         };
       }
     };
