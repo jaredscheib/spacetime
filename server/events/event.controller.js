@@ -9,5 +9,7 @@ exports.getRecent = function(req, res){
 
 exports.create = function(req, res){
   console.log('Data received:', req.body);
-  eventModel.create(req.body);
+  eventModel.create(req.body, function(dbCreateResult){
+    res.send(dbCreateResult);
+  });
 };

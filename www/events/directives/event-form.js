@@ -20,6 +20,12 @@ angular.module('spacetime')
             method: 'POST',
             url: '/events',
             data: scope.newEvent
+          })
+          .success(function(res){
+
+          })
+          .error(function(err){
+            
           });
           debugger;
         };
