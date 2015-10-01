@@ -2,7 +2,7 @@
 var eventModel = require('./event.model.js');
 
 exports.getRecent = function(req, res){
-  eventModel.getRecent(function(results){
+  eventModel.getRecent(20, function(results){
     res.send(results);
   });
 };

@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 var db = require('../database.js');
 
-exports.getRecent = function(num) {
+exports.getRecent = function(num, cb) {
   num = num || 20;
-  return db.query("SELECT * FROM events LIMIT " + num.toString(), function(error, results, fields){
-    return results;
+  db.query("SELECT * FROM events LIMIT " + num.toString(), function(error, results, fields){
+    cb(results);
   });
 };
 
