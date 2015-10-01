@@ -1,3 +1,12 @@
 (function(){
-  angular.module('spacetime', []);
+'use strict'
+
+  angular.module('spacetime', [
+    'ui.router'
+  ])
+
+  // .config([
+    // 
+  // ]);
+
 })();
