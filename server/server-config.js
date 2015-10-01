@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var cors = require('cors');
-var db = require('../db/database');
+var db = require('./database');
 
 var app = express();
 

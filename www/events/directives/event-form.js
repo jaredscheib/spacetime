@@ -3,7 +3,7 @@
 
 angular.module('spacetime')
   
-  .directive('eventForm', [function() {
+  .directive('eventForm', ['$http', function($http) {
     return {
       restrict: 'E',
       replace: true,
@@ -11,10 +11,16 @@ angular.module('spacetime')
       link: function(scope, element, attrs) {
         scope.formSubmitted = false;
 
-        scope.submitEvent = function(event) {
-          event.preventDefault();
-          console.log(scope.createEvent);
+        scope.submitEvent = function(e) {
+          e.preventDefault();
+          console.log('newEvent', scope.newEvent);
           scope.formSubmitted = true;
+
+          $http({
+            method: 'POST',
+            url: '/events',
+            data: scope.newEvent
+          });
           debugger;
         };
       }

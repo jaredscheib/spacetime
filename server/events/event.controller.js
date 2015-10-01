@@ -1,13 +1,13 @@
-var eventSeed = require('./event.seed.js').event_data;
+// var eventSeed = require('./event.seed.js').event_data;
+var eventModel = require('./event.model.js');
 
 exports.getRecent = function(req, res){
-  // retrieve seed (stub) data without referencing model since haven't set up SQL database yet
-  res.send(eventSeed);
+  eventModel.getRecent(function(results){
+    res.send(results);
+  });
 };
 
 exports.create = function(req, res){
-  // add object to eventSeed array without referencing model since haven't set up SQL database yet
-  console.log('Event received:', req.body);
-  eventSeed.push(req.body);
-  console.log(eventSeed);
+  console.log('Data received:', req.body);
+  eventModel.create(req.body);
 };

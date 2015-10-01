@@ -7,7 +7,7 @@ angular.module('spacetime')
   $scope.init = function(){
     $scope.events = [];
     $scope.retrieveEvents();
-    $scope.createEvent = {};
+    $scope.newEvent = {};
   };
 
   $scope.retrieveEvents = function(){
