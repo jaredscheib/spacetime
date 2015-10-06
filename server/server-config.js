@@ -14,7 +14,7 @@ app.use(methodOverride());
 app.use(express.static(__dirname + '/../www'));
 app.use(cors());
 
-app.use('/events', require('./events'));
+app.use('/api/events', require('./events'));
 
 app.use('*', function(req, res, next){
   var err = new Error('Not found');

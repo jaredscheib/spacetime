@@ -11,7 +11,7 @@ angular.module('spacetime')
   };
 
   $scope.retrieveEvents = function(){
-    $http.get('/events')
+    $http.get('/api/events')
     .then(function(res){
       $scope.events = res.data;
     }, function(res){
