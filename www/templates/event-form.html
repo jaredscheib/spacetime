@@ -1,10 +1,10 @@
 <form>
 	<h3>Create Your Event</h3>
-	<label for="event-title">Title: </label><input type="text" ng-model="newEvent.title"></input>
-	<label for="event-date">Date: </label><input type="date" ng-model="newEvent.date"></input>
-	<label for="event-time">Time: </label><input type="text" ng-model="newEvent.time"></input>
-	<label for="event-loc">Location: </label><input type="text" ng-model="newEvent.loc"></input>
-	<label for="event-desc">Description: </label><input type="text" ng-model="newEvent.desc"></input>
-	<label for="event-host">Host Name: </label><input type="text" ng-model="newEvent.host"></input>
-	<button class="btn btn-default" ng-click="submitEvent($event)" ng-disabled="formSubmitted">Submit</button>
+	<div><label for="event-title">Title: </label><input type="text" ng-model="newEvent.title"></input></div>
+	<div><label for="event-date">Date: </label><input type="date" ng-model="newEvent.date"></input></div>
+	<div><label for="event-time">Time: </label><input type="text" ng-model="newEvent.time"></input></div>
+	<div><label for="event-loc">Location: </label><input type="text" ng-model="newEvent.loc"></input></div>
+	<div><label for="event-desc">Description: </label><input type="text" ng-model="newEvent.desc"></input></div>
+	<div><label for="event-host">Host Name: </label><input type="text" ng-model="newEvent.host"></input></div>
+	<div><button class="btn btn-default" ng-click="submitEvent($event)" ng-disabled="formSubmitted">Submit</button></div>
 </form>
