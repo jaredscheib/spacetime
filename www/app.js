@@ -5,8 +5,23 @@
     'ui.router'
   ])
 
-  // .config([
-    // 
-  // ]);
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise('/login');
+
+      $stateProvider
+        .state('login', {
+          url: 'login',
+          templateUrl: 'partials/login.html'
+        })
+        .state('events', {
+          url: 'events',
+          templateUrl: 'partials/events.html'
+        })
+        .state('profile', {
+          url:'profile',
+          templateUrl: 'partials/profile.html'
+        });
+    }
+  ]);
 
 })();
