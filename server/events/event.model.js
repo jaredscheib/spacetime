@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var db = require('../database.js');
 
 exports.getRecent = function(next) {
-  db.query("SELECT * FROM events WHERE date > NOW()", function(error, results, fields){
+  db.query("SELECT * FROM events ORDER BY date DESC, time DESC LIMIT 20", function(error, results, fields){
     console.log('Retrieved from db', results);
     next(results);
   });
