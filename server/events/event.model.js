@@ -9,16 +9,14 @@ exports.getRecent = function(next) {
 };
 
 exports.create = function(event, next) {
+
   var eventFields = "'" + event.title + "', " + "'" + event.date + "', " + "'" + event.time + "', " +
                     "'" + event.loc + "', " + "'" + event.desc + "', " + "'" + event.host + "'";
-  console.log('Received event:', eventFields);
-  db.query("INSERT INTO events (title, date, time, location, description, " +
-           "host_name) VALUES (" + eventFields + ")", function(error, results, fields){
-    console.log('Saved to db:', results);
-    if (error) {
-      next(error)
-    } else {
-      next('Event created successfully');
-    }
+  var sql = "INSERT INTO events (title, date, time, location, description, host_name) VALUES (" + eventFields + ")";
+
+  console.log(sql);
+  
+  db.query(sql, function(error, results, fields){
+    next(error, results);
   });
 };

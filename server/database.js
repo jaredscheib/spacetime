@@ -3,7 +3,6 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  port: 3307,
   database: 'spacetimedb'
 });
 
