@@ -1,0 +1,7 @@
+<div ng-controller="EventsCtrl" ng-init="eventsFeed.init()">
+	<h4>Events Feed</h4>
+	<ul>
+		<li ng-repeat="event in eventsFeed.events">{{event.title}}</li>
+	</ul>
+	<event-form></event-form>
+</div>
