@@ -19,7 +19,7 @@ exports.event_data = [
   title: 'Least Fave Book Salon',
   date: 'Oct 10, 2015',
   time: '11:30AM',
-  location: '16th St Mission BART',
+  location: '16th & Mission BART',
   description: 'Read the worst among the foot traffic.',
   host_name: 'Heather'
 },
