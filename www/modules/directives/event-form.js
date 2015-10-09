@@ -4,12 +4,13 @@
 angular
   .module('events')
   
-  .directive('eventForm', ['$http', function(scope, $http) {
+  .directive('eventForm', ['$http', function($http) {
     return {
-      restrict: 'E',
+      restrict: 'AE',
       replace: true,
+      scope: false,
       templateUrl: 'modules/directives/event-form.html',
-      link: function(element, attrs) {
+      link: function(scope, element, attrs) {
         scope.formSubmitted = false;
         scope.newEvent = {
           date: new Date()
@@ -17,11 +18,10 @@ angular
 
         scope.submitEvent = function(e) {
           e.preventDefault();
-          debugger;
           scope.formSubmitted = true;
           $http.post('/api/events', scope.newEvent)
           .then(function(res){
-            scope.events.push(scope.newEvent);
+            scope.$parent.eventsFeed.events.push(scope.newEvent); // TODO: implement service for events
           }, function(err){
             console.log('Error on POST request when trying to submit event:', err.code);
             scope.formSubmitted = false;
